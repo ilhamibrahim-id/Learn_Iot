@@ -6,9 +6,9 @@
 #include <LiquidCrystal_I2C.h>
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-#define RED_LED D5 //led warna merah
+#define RED_LED D8 //led warna merah
 #define GREEN_LED D6 //led warna hijau
-#define BLUE_LED D8 //led warnah biru
+#define BLUE_LED D5 //led warnah biru
 const char *ssid = "POCO X3 Pro";//silakan disesuaikan sendiri
 const char *password = "berkahibu";//silakan disesuaikan sendiri
 const char *mqtt_server = "broker.hivemq.com";
@@ -88,29 +88,69 @@ void loop()
     lcd.print("-----");
     lcd.print(temperatureTemp);
     lcd.print("C-----");
-    if  ((int)temperature > 30) {
+    if  ((int)temperature > 25) {
       lcd.home();
       lcd.setCursor(0, 1);
       lcd.println("--Burned House--");
-      digitalWrite(BLUE_LED, HIGH);
+      digitalWrite(RED_LED, HIGH);
       delay(50);
-      digitalWrite(BLUE_LED, LOW);
+      digitalWrite(RED_LED, LOW);
       delay(50);
-      digitalWrite(BLUE_LED, HIGH);
+      digitalWrite(RED_LED, HIGH);
       delay(50);
-      digitalWrite(BLUE_LED, LOW);
+      digitalWrite(RED_LED, LOW);
       delay(50);
-      digitalWrite(BLUE_LED, HIGH);
+      digitalWrite(RED_LED, HIGH);
       delay(50);
-      digitalWrite(BLUE_LED, LOW);
+      digitalWrite(RED_LED, LOW);
       delay(50);
-      digitalWrite(BLUE_LED, HIGH);
+      digitalWrite(RED_LED, HIGH);
       delay(50);
-      digitalWrite(BLUE_LED, LOW);
+      digitalWrite(RED_LED, LOW);
       delay(50);
-      digitalWrite(BLUE_LED, HIGH);
+      digitalWrite(RED_LED, HIGH);
       delay(50);
-      digitalWrite(BLUE_LED, LOW);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
+      delay(50);
+      digitalWrite(RED_LED, HIGH);
+      delay(50);
+      digitalWrite(RED_LED, LOW);
       delay(50);
     } else {
       lcd.home();
